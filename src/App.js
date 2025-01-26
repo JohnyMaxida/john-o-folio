@@ -1,13 +1,11 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-
-import "./styles/main.css";
 import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
 import Home from "./pages/Home"
 import Projects from "./pages/Projects"
 import Project from "./pages/Project"
 import Contacts from "./pages/Contacts"
-// import scrollToTop from "./utils/scrollToTop"
+import "./styles/main.css";
 
 function App() {
   return (
@@ -27,4 +25,3 @@ function App() {
 }
 
 export default App;
-	// <scrollToTop />
