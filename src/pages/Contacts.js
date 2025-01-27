@@ -18,7 +18,7 @@ const Contacts = () => {
                     </li>
 					<li className="content-list__item">
                         <h2 className="title-2">Website</h2>
-                        <p><a href="www.serebreum.netify.app">serebreum.netify.app</a></p>
+                        <p><a href="https://dewiar.com/bwm/110626">Сайт-визитка</a></p>
                     </li>
                     <li className="content-list__item">
                         <h2 className="title-2">Email</h2>
