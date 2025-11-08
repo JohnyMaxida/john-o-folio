@@ -1,7 +1,8 @@
-// import "./style.css";
+import "./style.css";
 import {useParams} from 'react-router-dom';
 import BtnGitHub from "./../components/BtnGitHub/BtnGitHub";
 import {projects} from "./../helpers/projectList";
+import { motion } from "framer-motion";
 
 const Project = ({title, img}) => {
 	const {id} = useParams();
@@ -11,13 +12,23 @@ const Project = ({title, img}) => {
         <div className="container">
             <div className="project-details">
 				<h1 className="title-1">{project.title}</h1>
-				<img src={project.imgBig} alt={project.title} className="project-details__cover" />
+				<motion.img
+					src={project.imgBig}
+					alt={project.title}
+					className="project-details__cover"
+					initial={{ opacity: 0, scale: 0.9 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						duration: 5,
+						ease: "easeInOut"
+					}}
+				/>
                 <div className="project-details__desc">
                     <p>Skills: {project.skills}</p>
                 </div>
 				{project.gitHublink && (
 				<BtnGitHub link={project.gitHublink}/>
-				)}				
+				)}
             </div>
         </div>
     </main>
